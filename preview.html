@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Box Preview</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .preview-shell {
+            min-height: 100vh;
+            padding: 30px 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .preview-wrap {
+            width: min(780px, 100%);
+            margin: 0 auto;
+        }
+
+        .preview-header {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .preview-subtitle {
+            margin-top: 8px;
+            color: #9aa4af;
+            font-size: 14px;
+        }
+
+        .preview-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .preview-select,
+        .preview-button {
+            height: 42px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            background: #161b22;
+            color: #e6edf3;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .preview-select {
+            flex: 1;
+            min-width: 260px;
+            padding: 0 12px;
+        }
+
+        .preview-button {
+            padding: 0 14px;
+            cursor: pointer;
+        }
+
+
+        .preview-status {
+            margin: 0 0 14px;
+            color: #8b949e;
+            font-size: 14px;
+        }
+
+        .result-card {
+            display: block;
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(6, 10, 16, 0.92);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 24px;
+            cursor: zoom-out;
+        }
+
+        .lightbox-image {
+            max-width: min(96vw, 1400px);
+            max-height: 86vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+        }
+
+        .lightbox-hint {
+            margin: 0;
+            font-size: 13px;
+            color: #9aa4af;
+        }
+    </style>
+</head>
+<body>
+    <main class="preview-shell">
+        <div class="preview-wrap">
+            <header class="preview-header">
+                <h1>Dev Box Preview</h1>
+            </header>
+
+            <div class="preview-controls">
+                <select id="preview-select" class="preview-select"></select>
+                <button id="preview-random" class="preview-button" type="button">Random</button>
+            </div>
+
+            <p id="preview-status" class="preview-status">Loading distros...</p>
+
+            <section id="result-card" class="result-card" aria-live="polite">
+                <div class="winner-header">
+                    <h2 id="result-name"></h2>
+                    <span id="result-difficulty" class="difficulty-badge"></span>
+                    <span id="result-family" class="family-badge"></span>
+                </div>
+                <div id="result-image-wrap" class="result-image-wrap hidden">
+                    <img id="result-image" class="result-image" alt="" />
+                </div>
+                <p id="result-comment"></p>
+                <a id="result-link" target="_blank" rel="noopener noreferrer"></a>
+            </section>
+        </div>
+    </main>
+
+    <div id="image-lightbox" class="image-lightbox hidden" role="dialog" aria-modal="true" aria-label="Image preview">
+        <img id="lightbox-image" class="lightbox-image" alt="" />
+        <p class="lightbox-hint">Click anywhere or press Escape to close</p>
+    </div>
+
+    <script>
+        const selectEl = document.getElementById('preview-select');
+        const randomBtn = document.getElementById('preview-random');
+        const statusEl = document.getElementById('preview-status');
+
+        const resultName = document.getElementById('result-name');
+        const resultComment = document.getElementById('result-comment');
+        const resultLink = document.getElementById('result-link');
+        const resultDifficulty = document.getElementById('result-difficulty');
+        const resultFamily = document.getElementById('result-family');
+        const resultImageWrap = document.getElementById('result-image-wrap');
+        const resultImage = document.getElementById('result-image');
+
+        const imageLightbox = document.getElementById('image-lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+
+        let distros = [];
+
+        function normalizeName(value) {
+            return String(value || '').trim().toLowerCase();
+        }
+
+        function normalizeFamilyValue(value) {
+            const normalized = normalizeName(value);
+
+            if (normalized === 'linux') return 'linux';
+            if (['bsd', 'freebsd', 'openbsd', 'netbsd', 'dragonfly bsd', 'truenas scale', 'midnightbsd', 'ghostbsd'].includes(normalized)) {
+                return 'bsd';
+            }
+
+            if (normalized === 'boredos' || normalized === 'other' || normalized === 'other systems' || normalized === 'other-systems') {
+                return 'other';
+            }
+
+            return 'other';
+        }
+
+        function closeImageLightbox() {
+            imageLightbox.classList.add('hidden');
+            lightboxImage.removeAttribute('src');
+            lightboxImage.alt = '';
+            document.body.style.overflow = '';
+        }
+
+        function openImageLightbox() {
+            if (!resultImage.getAttribute('src')) {
+                return;
+            }
+
+            lightboxImage.src = resultImage.src;
+            lightboxImage.alt = resultImage.alt || 'Distro preview';
+            imageLightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderDistro(distro) {
+            if (!distro) {
+                return;
+            }
+
+            const difficultyMap = { easy: 'Easy', medium: 'Medium', hard: 'Hard' };
+            const familyMap = { linux: 'Linux', bsd: 'BSD', other: 'Other systems', boredos: 'BoredOS' };
+
+            const difficultyKey = ['easy', 'medium', 'hard'].includes(normalizeName(distro.difficulty))
+                ? normalizeName(distro.difficulty)
+                : 'medium';
+            const familyKey = normalizeFamilyValue(distro.family);
+
+            resultName.textContent = distro.name || 'Unknown distro';
+            resultDifficulty.textContent = difficultyMap[difficultyKey] || 'Medium';
+            resultDifficulty.className = `difficulty-badge difficulty-${difficultyKey}`;
+
+            resultFamily.textContent = familyMap[familyKey] || 'Other systems';
+            resultFamily.className = `family-badge family-${familyKey}`;
+
+            resultComment.textContent = distro.comment || '';
+            resultLink.textContent = distro.link ? 'Official website' : '';
+            if (distro.link) {
+                resultLink.href = distro.link;
+            } else {
+                resultLink.removeAttribute('href');
+            }
+
+            if (typeof distro.image === 'string' && distro.image.trim()) {
+                resultImage.src = distro.image.trim();
+                resultImage.alt = `${distro.name} preview`;
+                resultImageWrap.classList.remove('hidden');
+            } else {
+                resultImage.removeAttribute('src');
+                resultImage.alt = '';
+                resultImageWrap.classList.add('hidden');
+            }
+
+            statusEl.textContent = `Previewing: ${distro.name}`;
+        }
+
+        function populateSelect() {
+            selectEl.innerHTML = '';
+
+            distros.forEach((distro, index) => {
+                const option = document.createElement('option');
+                option.value = String(index);
+                option.textContent = distro.name || `Distro ${index + 1}`;
+                selectEl.appendChild(option);
+            });
+        }
+
+        function getInitialIndex() {
+            const url = new URL(window.location.href);
+            const queryName = normalizeName(url.searchParams.get('name'));
+
+            if (!queryName) {
+                return 0;
+            }
+
+            const foundIndex = distros.findIndex((distro) => normalizeName(distro.name) === queryName);
+            return foundIndex >= 0 ? foundIndex : 0;
+        }
+
+        async function init() {
+            try {
+                const response = await fetch('os.json', { cache: 'no-store' });
+                if (!response.ok) {
+                    throw new Error('Could not load os.json');
+                }
+
+                const payload = await response.json();
+                distros = Array.isArray(payload) ? payload.filter((item) => item && typeof item === 'object') : [];
+
+                if (!distros.length) {
+                    throw new Error('No distros found in os.json');
+                }
+
+                populateSelect();
+                const initialIndex = getInitialIndex();
+                selectEl.value = String(initialIndex);
+                renderDistro(distros[initialIndex]);
+            } catch (error) {
+                statusEl.textContent = error.message || 'Failed to load preview data.';
+            }
+        }
+
+        selectEl.addEventListener('change', () => {
+            const index = Number(selectEl.value);
+            renderDistro(distros[index]);
+        });
+
+        randomBtn.addEventListener('click', () => {
+            if (!distros.length) {
+                return;
+            }
+
+            const index = Math.floor(Math.random() * distros.length);
+            selectEl.value = String(index);
+            renderDistro(distros[index]);
+        });
+
+        resultImage.addEventListener('click', openImageLightbox);
+        imageLightbox.addEventListener('click', closeImageLightbox);
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !imageLightbox.classList.contains('hidden')) {
+                closeImageLightbox();
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>

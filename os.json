@@ -1,0 +1,481 @@
+[
+  {
+    "name": "Ubuntu",
+    "comment": "A popular Linux distribution based on Debian, known for its ease of use and strong community support.",
+    "link": "https://ubuntu.com/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Fedora",
+    "comment": "A cutting-edge Linux distribution sponsored by Red Hat, known for its focus on innovation and open-source software.",
+    "link": "https://getfedora.org/",
+    "difficulty": "easy",
+    "family": "linux",
+    "image": "assets/fedora.png"
+  },
+  {
+    "name": "Arch Linux",
+    "comment": "A lightweight and flexible Linux distribution that follows a rolling release model, allowing users to customize their system.",
+    "link": "https://archlinux.org/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Debian",
+    "comment": "One of the oldest and most stable Linux distributions, serving as the base for many other distros including Ubuntu.",
+    "link": "https://www.debian.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Linux Mint",
+    "comment": "A beginner-friendly distribution based on Ubuntu/Debian, offering a familiar desktop experience with Cinnamon, MATE, or Xfce.",
+    "link": "https://linuxmint.com/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "openSUSE",
+    "comment": "A community distribution sponsored by SUSE, offering both a stable release (Leap) and a rolling release (Tumbleweed).",
+    "link": "https://www.opensuse.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Manjaro",
+    "comment": "An Arch-based distribution that offers the power of Arch with a more user-friendly installer and curated packages.",
+    "link": "https://manjaro.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Pop!_OS",
+    "comment": "Developed by System76, an Ubuntu-based distro tailored for developers and gamers with strong GPU support.",
+    "link": "https://pop.system76.com/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "elementary OS",
+    "comment": "A design-focused Ubuntu-based distribution with its own Pantheon desktop, aiming for a macOS-like experience.",
+    "link": "https://elementary.io/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Zorin OS",
+    "comment": "An Ubuntu-based distro designed to ease the transition for Windows and macOS users with familiar layouts.",
+    "link": "https://zorin.com/os/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "MX Linux",
+    "comment": "A Debian-based distribution combining elegant desktops with simple configuration and solid stability.",
+    "link": "https://mxlinux.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Solus",
+    "comment": "An independently built rolling-release distribution featuring its own Budgie desktop environment.",
+    "link": "https://getsol.us/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Void Linux",
+    "comment": "An independent rolling-release distribution using the runit init system instead of systemd.",
+    "link": "https://voidlinux.org/",
+    "difficulty": "hard",
+    "family": "linux",
+    "image": "assets/void.png"
+  },
+  {
+    "name": "NixOS",
+    "comment": "A unique distribution built on the Nix package manager, enabling fully reproducible and declarative system configurations.",
+    "link": "https://nixos.org/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Alpine Linux",
+    "comment": "A security-oriented, lightweight distribution built with musl libc and BusyBox, popular for containers.",
+    "link": "https://alpinelinux.org/",
+    "difficulty": "medium",
+    "family": "linux",
+    "image": "assets/alpine.png"
+  },
+  {
+    "name": "Gentoo",
+    "comment": "A source-based distribution where packages are compiled from source, giving deep control over optimization.",
+    "link": "https://www.gentoo.org/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Slackware",
+    "comment": "The oldest surviving Linux distribution, valued for its simplicity and Unix-like philosophy.",
+    "link": "http://www.slackware.com/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "CentOS Stream",
+    "comment": "A rolling-release distribution that sits upstream of Red Hat Enterprise Linux, used for testing future RHEL features.",
+    "link": "https://www.centos.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Rocky Linux",
+    "comment": "A community-driven, enterprise-grade distribution built to be bug-for-bug compatible with RHEL.",
+    "link": "https://rockylinux.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "AlmaLinux",
+    "comment": "An open-source, RHEL-compatible distribution created after CentOS shifted to a rolling model.",
+    "link": "https://almalinux.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Red Hat Enterprise Linux",
+    "comment": "A commercial, enterprise-focused distribution known for stability, long-term support, and certification.",
+    "link": "https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "SUSE Linux Enterprise",
+    "comment": "A commercial enterprise distribution from SUSE, widely used in business and mainframe environments.",
+    "link": "https://www.suse.com/products/server/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Oracle Linux",
+    "comment": "A RHEL-compatible enterprise distribution from Oracle, offering an interchangeable kernel option (UEK).",
+    "link": "https://www.oracle.com/linux/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Kali Linux",
+    "comment": "A Debian-based distribution preloaded with tools for penetration testing and security auditing.",
+    "link": "https://www.kali.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Parrot OS",
+    "comment": "A security and privacy-focused distribution aimed at pentesting, forensics, and anonymous browsing.",
+    "link": "https://parrotsec.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "BlackArch Linux",
+    "comment": "An Arch-based penetration testing distribution with a huge repository of security tools.",
+    "link": "https://blackarch.org/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Tails",
+    "comment": "A live, amnesic distribution that routes all traffic through Tor to preserve privacy and anonymity.",
+    "link": "https://tails.net/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Qubes OS",
+    "comment": "A security-focused distribution that isolates applications into separate virtual machines (qubes).",
+    "link": "https://www.qubes-os.org/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Whonix",
+    "comment": "A privacy-focused distribution split into a Gateway and Workstation VM, routing all traffic through Tor.",
+    "link": "https://www.whonix.org/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Deepin",
+    "comment": "A Chinese-developed distribution known for its polished, custom Deepin Desktop Environment (DDE).",
+    "link": "https://www.deepin.org/en/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "EndeavourOS",
+    "comment": "A near-vanilla, Arch-based distribution designed to be simple to install while staying close to Arch itself.",
+    "link": "https://endeavouros.com/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Garuda Linux",
+    "comment": "An Arch-based distribution with performance tweaks, BTRFS snapshots, and a striking default aesthetic.",
+    "link": "https://garudalinux.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "CachyOS",
+    "comment": "A performance-oriented Arch-based distribution using optimized kernels and packages for speed.",
+    "link": "https://cachyos.org/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Artix Linux",
+    "comment": "An Arch-based distribution that replaces systemd with alternative init systems like OpenRC or runit.",
+    "link": "https://artixlinux.org/",
+    "difficulty": "hard",
+    "family": "linux"
+  },
+  {
+    "name": "Puppy Linux",
+    "comment": "An extremely lightweight distribution designed to run entirely in RAM, ideal for old hardware.",
+    "link": "https://puppylinux.com/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "antiX",
+    "comment": "A lightweight, systemd-free Debian-based distribution for older and low-resource computers.",
+    "link": "https://antixlinux.com/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Devuan",
+    "comment": "A fork of Debian created specifically to offer an init-system-agnostic alternative without systemd.",
+    "link": "https://www.devuan.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "PCLinuxOS",
+    "comment": "An independent, rolling-release distribution focused on ease of use with a KDE-centric desktop.",
+    "link": "https://www.pclinuxos.com/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Mageia",
+    "comment": "A community fork of Mandriva Linux focused on stability and a user-friendly configuration toolset.",
+    "link": "https://www.mageia.org/en/",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Raspberry Pi OS",
+    "comment": "A Debian-based distribution optimized for Raspberry Pi single-board computers.",
+    "link": "https://www.raspberrypi.com/software/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Kubuntu",
+    "comment": "An official Ubuntu flavor that ships the KDE Plasma desktop environment by default.",
+    "link": "https://kubuntu.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Xubuntu",
+    "comment": "An official Ubuntu flavor using the lightweight Xfce desktop environment.",
+    "link": "https://xubuntu.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Lubuntu",
+    "comment": "An official Ubuntu flavor built around the lightweight LXQt desktop for older hardware.",
+    "link": "https://lubuntu.me/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Ubuntu MATE",
+    "comment": "An official Ubuntu flavor featuring the traditional MATE desktop environment.",
+    "link": "https://ubuntu-mate.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Ubuntu Studio",
+    "comment": "An official Ubuntu flavor tailored for multimedia creation, with audio, video, and graphics tools preinstalled.",
+    "link": "https://ubuntustudio.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "KDE neon",
+    "comment": "An Ubuntu-based distribution maintained by the KDE community to showcase the very latest Plasma releases.",
+    "link": "https://neon.kde.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Bodhi Linux",
+    "comment": "A lightweight Ubuntu-based distribution built around the Moksha desktop, a fork of Enlightenment.",
+    "link": "https://www.bodhilinux.com/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Peppermint OS",
+    "comment": "A lightweight, cloud-focused Debian-based distribution combining local apps with web app integration.",
+    "link": "https://peppermintos.com/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "TinyCore Linux",
+    "comment": "A minimalist distribution just a few megabytes in size, built to run fully in RAM.",
+    "link": "http://tinycorelinux.net/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "SteamOS",
+    "comment": "Valve's Arch-based distribution optimized for gaming, powering the Steam Deck.",
+    "link": "https://store.steampowered.com/steamos",
+    "difficulty": "medium",
+    "family": "linux"
+  },
+  {
+    "name": "Bazzite",
+    "comment": "An immutable, Fedora-based gaming distribution built on the same tech as SteamOS, usable on any PC.",
+    "link": "https://bazzite.gg/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Nobara",
+    "comment": "A Fedora-based distribution created by a Valve contributor, tuned for gaming and content creation.",
+    "link": "https://nobaraproject.org/",
+    "difficulty": "easy",
+    "family": "linux"
+  },
+  {
+    "name": "Amog-OS",
+    "comment": "A Linux distribution themed around the popular game 'Among Us', featuring custom wallpapers, icons, and a unique desktop environment.",
+    "link": "https://amog-os.github.io/",
+    "difficulty": "easy",
+    "family": "linux",
+    "image": "assets/amogos.png"
+  },
+  {
+    "name": "FreeBSD",
+    "comment": "A powerful BSD operating system known for its performance, security, and clean UNIX heritage.",
+    "link": "https://www.freebsd.org/",
+    "difficulty": "medium",
+    "family": "bsd",
+    "image": "assets/freebsd.jpg"
+  },
+  {
+    "name": "OpenBSD",
+    "comment": "A security-focused BSD operating system celebrated for its proactive code auditing and strong defaults.",
+    "link": "https://www.openbsd.org/",
+    "difficulty": "hard",
+    "family": "bsd",
+    "image": "assets/openbsd.png"
+  },
+  {
+    "name": "NetBSD",
+    "comment": "A portable BSD system built to run on many different architectures, from embedded devices to servers.",
+    "link": "https://www.netbsd.org/",
+    "difficulty": "medium",
+    "family": "bsd",
+    "image": "assets/netbsd.png"
+  },
+  {
+    "name": "DragonFly BSD",
+    "comment": "A BSD variant focused on performance, SMP scalability, and a modern kernel architecture.",
+    "link": "https://www.dragonflybsd.org/",
+    "difficulty": "hard",
+    "family": "bsd",
+    "image": "assets/dragonflybsd.png"
+  },
+  {
+    "name": "GhostBSD",
+    "comment": "A desktop-centric BSD distribution built around MATE and designed for ease of use.",
+    "link": "https://ghostbsd.org/",
+    "difficulty": "medium",
+    "family": "bsd",
+    "image": "assets/ghostbsd.png"
+  },
+  {
+    "name": "MidnightBSD",
+    "comment": "A desktop-oriented BSD distribution focused on polishing the user experience for everyday systems.",
+    "link": "https://www.midnightbsd.org/",
+    "difficulty": "medium",
+    "family": "bsd",
+    "image": "assets/midbsd.png"
+  },
+  {
+    "name": "TrueNAS Scale",
+    "comment": "A Debian-based NAS platform with a BSD-inspired storage stack and enterprise-grade features.",
+    "link": "https://www.truenas.com/truenas-scale/",
+    "difficulty": "medium",
+    "family": "bsd",
+    "image": "assets/truenas.png"
+  },
+  {
+    "name": "BoredOS",
+    "comment": "A niche, experimental hobby operating system written in C and x86-64 assembly.\nFun fact, I made this wallpaper and it ships with the OS.",
+    "link": "https://boredos.dev",
+    "difficulty": "hard",
+    "family": "boredos",
+    "image": "assets/boredos.jpg"
+  },
+  {
+    "name": "TempleOS",
+    "comment": "A unique, biblical-themed operating system created by Terry A. Davis, known for its simplicity and 16-bit color graphics.",
+    "link": "https://templeos.holyc.xyz/",
+    "difficulty": "hard",
+    "family": "templeos",
+    "image": "assets/temple.png"
+  },
+  {
+    "name": "Red Star OS",
+    "comment": "A North Korean Linux-based operating system with a heavily modified KDE desktop and unique features. Fun fact, I managed to install it and change the language to English, but im yet to get the internet working on it.",
+    "link": "https://en.wikipedia.org/wiki/Red_Star_OS",
+    "difficulty": "hard",
+    "family": "linux",
+    "image": "assets/redstar.png"
+  },
+  {
+    "name": "Astra Linux",
+    "comment": "A Russian Linux distribution designed for government and military use, with enhanced security features.",
+    "link": "https://astralinux.ru/en/",
+    "difficulty": "medium",
+    "family": "linux",
+    "image": "assets/astra.png"
+  },
+  {
+    "name": "Gendbuntu",
+    "comment": "A custom version of the Ubuntu Linux operating system created and used by the French National Gendarmerie (Military Police).",
+    "link": "https://en.wikipedia.org/wiki/GendBuntu",
+    "difficulty": "medium",
+    "family": "linux",
+    "image": "assets/gendbuntu.png"
+  },
+  {
+    "name": "The Bleed Kernel",
+    "comment": "The Bleed Kernel is a Multitasking Monolithic Operating System Kernel for x86_64 Machines.",
+    "link": "https://bleedkernel.com/",
+    "difficulty": "hard",
+    "family": "bleed",
+    "image": "assets/bleed.png"
+  }
+]
