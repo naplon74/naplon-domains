@@ -1,0 +1,9 @@
+site_name: Naplon docs
+theme: lantana
+
+nav:
+    - index.md
+    - linux.md
+    - license.md
+
+# mkdocs serve to start
