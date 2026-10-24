@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info | naplon.xyz</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+            background: #0b0d12;
+            color: #e5e7eb;
+            font-family: sans-serif;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 380px;
+            padding: 32px;
+            text-align: center;
+            background: #11141c;
+            border: 1px solid #242936;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px #00000030;
+        }
+
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: -1px;
+        }
+
+        p {
+            margin: 0 0 24px;
+            color: #858b9b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            color: #e5e7eb;
+            background: #1b2030;
+            border: 1px solid #30384b;
+            border-radius: 8px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .btn:hover {
+            background: #28334b;
+            border-color: #465879;
+        }
+
+        footer {
+            margin-top: 24px;
+            color: #555d6e;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <div class="heading">
+            <img class="logo" src="logo.png" alt="naplon.xyz logo">
+            <h1>naplon.xyz</h1>
+        </div>
+
+        <p>
+            Rewriting a whole new website.<br>
+            Be back soon...
+        </p>
+
+        <div class="buttons">
+            <a class="btn primary" href="https://docs.naplon.xyz" target="_blank" rel="noopener noreferrer">
+                Docs
+            </a>
+
+            <a class="btn" href="https://unix.naplon.xyz" target="_blank" rel="noopener noreferrer">
+                Roulette
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 naplon.xyz
+        </footer>
+    </main>
+</body>
+
+</html>
