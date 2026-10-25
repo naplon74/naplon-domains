@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2c2e31">
+  <meta name="description" content="Projects by Naplon.">
+
+  <title>/home/naplon/projects</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <a class="nav-brand" href="index.html" aria-label="Naplon home"><strong>naplon</strong></a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="projects.html" aria-current="page">projects</a>
+        <a target="_blank" rel="noopener" href="https://docs.naplon.xyz/linux/">documentation</a>
+        <a target="_blank" rel="noopener" href="https://unix.naplon.xyz">???</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="intro">
+        <p class="label">What I build</p>
+        <h1>Projects</h1>
+        <p>Tools, apps and experiments. Some finished, some still in progress.</p>
+      </div>
+
+      <section id="projects">
+        <div class="project-grid">
+
+
+          <article class="card project-card">
+            <h2>gitRE</h2>
+            <p>
+              Simple multi-repository git status tool for Linux.
+              It scans your system for git repositories, collects their status, and displays a clean summary.
+            </p>
+            <ul class="tags">
+              <li>Linux</li>
+              <li>Bash</li>
+              <li>Python</li>
+            </ul>
+            <div class="card-actions">
+              <button class="button copy-btn" type="button"
+                data-copy="curl -fsSL https://raw.githubusercontent.com/naplon74/git_RE/main/install.sh | bash">Copy command</button>
+              <a class="button" href="https://github.com/naplon74/gitRE">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h2>Brave Linux debloat</h2>
+            <p>
+              A simple script that installs a managed policies.json to disable unnecessary Brave features and provide a privacy-focused default configuration.
+            </p>
+            <ul class="tags">
+              <li>Linux</li>
+              <li>Bash</li>
+              <li>Brave</li>
+            </ul>
+            <div class="card-actions">
+              <button class="button copy-btn" type="button"
+              data-copy="A simple script that installs a managed policies.json to disable unnecessary Brave features and provide a privacy-focused default configuration.">Copy command</button>
+              <a class="button" target="_blank" rel="noopener" href="https://github.com/naplon74/brave-linux-debloat">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h2>Magisk PlusKey</h2>
+            <p>
+              Android app / Magisk module to bind the extra key to actions, apps or
+              specific activities. (Need root)
+            </p>
+            <p>Tested on OnePlus Nord 5 (CPH2709). Works on crDroid 12.12, LineageOS 23.2, AlphaDroid 4.7 and DerpFest 16.2 (All Android 16)</p>
+            <ul class="tags">
+              <li>Android</li>
+              <li>Magisk</li>
+              <li>Bash</li>
+            </ul>
+            <a class="button" target="_blank" rel="noopener" href="https://github.com/naplon74/magisk-pluskey">View on
+              GitHub</a>
+          </article>
+
+          <article class="card project-card">
+            <h2>Clean Me</h2>
+            <p>
+              Temporarily lock your keyboard and mouse so you can clean them safely.
+              A lightweight keyboard and mouse cleaning utility for Windows and Linux.
+            </p>
+            <ul class="tags">
+              <li>Linux, Windows</li>
+              <li>GTK4, PyQt5</li>
+              <li>Python</li>
+              <li>Gnome Builder</li>
+            </ul>
+            <a class="button" target="_blank" rel="noopener" href="https://github.com/naplon74/CleanMe">View on GitHub</a>
+          </article>
+
+          <article class="card project-card">
+            <h2>???</h2>
+            <p>Yet to come.</p>
+            <ul class="tags">
+              <li>???</li>
+              <li>???</li>
+              <li>???</li>
+            </ul>
+          </article>
+
+          <article class="card project-card">
+            <h2>???</h2>
+            <p>Yet to come.</p>
+            <ul class="tags">
+              <li>???</li>
+              <li>???</li>
+              <li>???</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="more">
+          <a class="button" target="_blank" rel="noopener" href="https://github.com/naplon74">More on GitHub</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="year"></span> Naplon &middot;
+        <a target="_blank" rel="noopener" href="https://github.com/naplon74">GitHub</a>
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>
