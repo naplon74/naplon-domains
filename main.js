@@ -1,4 +1,13 @@
-// Copy-to-clipboard buttons
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+navToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+
+  navToggle.setAttribute("aria-expanded", isOpen);
+});
+
+
 document.querySelectorAll(".copy-btn").forEach((btn) => {
   btn.dataset.label = btn.textContent;
 
@@ -8,7 +17,6 @@ document.querySelectorAll(".copy-btn").forEach((btn) => {
     try {
       await navigator.clipboard.writeText(text);
     } catch {
-      // Fallback for http:// or file:// pages where the Clipboard API is blocked
       const ta = document.createElement("textarea");
       ta.value = text;
       ta.style.position = "fixed";
