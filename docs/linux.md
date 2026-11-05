@@ -1,6 +1,6 @@
 # Should you really switch to Linux in 2026?
 
-**Last update: 17/10/26 – By naplon_**
+**Last update: 05/11/26 – By naplon_**
 
 
 ![Thumbnail](img/Thumbnail.png "Thumbnail")
@@ -20,9 +20,17 @@ EXTRA - A brief introduction to the Linux world
 > [!CAUTION]  
 > This video is not a tutorial on how to install Linux, and it’s not Linux propaganda. It’s just my honest opinion as someone who’s been through this.
 
+## Introduction
 
+Should you use Linux in 2026? 
 
-## I – Why even consider switching?
+Unfortunately there's not an easy answer to this question, it depends of your hardware and use case for the most part. 
+
+Let's start with something important. What is Linux?  Linux alone is not an operating system it's what we call a 'kernel', to put it simple a kernel is a bridge between your software like Windows or MacOS and your hardware like the CPU or the GPU. That's why they are Linux distro (distribution). They take the free Linux kernel and add a user space on top of it : a desktop, apps, drivers and everything that an operating system needs.
+
+To learn more about Linux refer to the **Extra** chapter.
+
+## I - Why even consider switching?
 
 #### I.1 Windows
 
@@ -47,7 +55,7 @@ But that doesn’t automatically make Linux better.
 And that’s really the point of this video.  
 I’m not here to tell you that Linux is superior to Windows. I’m going to walk through the advantages, the disadvantages, and the situations where switching actually makes sense.
 
-#### I.2 – Curiosity
+#### I.2 - Curiosity
 
 This part is a bit more personal.
 
@@ -82,7 +90,7 @@ Now let's speak about privacy. I'm not here to claim Windows spies on you or any
 
 So if you are concerned about privacy Linux is generally the better choice, if you mostly got nothing to hide then any regular distro with a good browser setup will do the job. But if you deeply care about privacy [Tail os](https://tails.net/) can be a solution as well. 
 
-#### I.5 – Studies
+#### I.5 - Studies
 
 Another common reason for people to use Linux is their studies.
 
@@ -90,7 +98,7 @@ I can take my own case as an example. I study networks and telecommunications, w
 
 To keep it short: if your studies aren’t IT-related, it’s fairly unlikely you’ll need to use Linux on a daily basis.
 
-## II – The hardware question
+## II - The hardware question
 
 #### II.1 - GPU
 
@@ -100,9 +108,9 @@ When I first used Linux on my desktop, everything seemed fine… until I tried i
 
 I was on Debian (one of the most popular and stable distributions Ubuntu is based on it). Debian has a strong reputation for stability, but it doesn’t ship the proprietary NVIDIA drivers by default. Every time I tried to install them, I managed to break the system. Eventually I gave up on Linux for a while.
 
-Later I bought a Lenovo LOQ 15IRX10 laptop. When I got it, Linux wasn’t even an official option. After getting fed up with Windows 11, I decided to try again.
+Later I bought a Lenovo LOQ 15IRX10 laptop. When I got it, Linux wasn’t even an option. After getting fed up with Windows 11, I decided to try again.
 
-I started with Debian once more. This time the laptop had an RTX 5050, and installing the drivers still broke the installation. I use a dual-monitor setup, so I needed the NVIDIA drivers for the second screen to work properly — the iGPU alone wasn’t enough.
+I started with Debian once more. This time the laptop had an RTX 5050, and installing the drivers still broke the installation. I use a dual-monitor setup, so I needed the NVIDIA drivers for the second screen to work properly the iGPU alone wasn’t enough.
 
 So I switched to Fedora.
 
@@ -121,22 +129,22 @@ I had a similar experience later with Void Linux. In the end, if you have an NVI
 - The distribution you choose  
 - And, honestly, a bit of luck  
 
-On the AMD and Intel side, things look much brighter. Their GPU drivers are open source, so the code is available for anyone to improve. Because of that, AMD and Intel drivers are pre-installed (or very easy to get) on most distributions. On Debian, for example, you usually won’t have the same headaches.
+On the AMD and Intel side, things look much brighter. Their GPU drivers are open source, so the code is available for anyone to see and edit. Because of that, AMD and Intel drivers are pre-installed (or very easy to get) on most distributions. On Debian, for example, you usually won’t have the same headaches.
 
 I’ve only ever owned NVIDIA GPUs, so I can’t claim zero issues with AMD or Intel, but it’s safe to say you’ll generally have a smoother experience.
 
 #### II.2 - Generic Hardware
 
-Unfortunatly having all of your hardwares to work out the box can be a bit tricky, the network / sound card could be missing, the fingerprint scanner may not work etc etc...
-Again those situation are very different hardware to hardware and software to software (distribution). Some laptop brand have more drivers support for Linux than others, a nice exemple would be Lenovo, personally I never had any issue with my laptop, and I hardly see people complaining about Lenovo drivers. And of course which distro you choose will make a difference, I will (again) take Fedora as an exemple since this is the distro I currently use and it's the one I've used for the longest. I really had no issues with my drivers on Fedora (GPU exlcuded).
+Unfortunately having all of your hardware to work out the box can be a bit tricky, the network / sound card could be missing, the fingerprint scanner may not work etc etc...
+Again those situation are very different hardware to hardware and software to software (distribution). Some laptop brand have more drivers support for Linux than others, a nice example would be Lenovo, personally I never had any issue with my laptop, and I hardly see people complaining about Lenovo drivers. And of course which distro you choose will make a difference, I will (again) take Fedora as an example since this is the distro I currently use and it's the one I've used for the longest. I really had no issues with my drivers on Fedora (GPU excluded).
 
 Let's introduce an important aspect of Linux : Desktop environment 
 The Desktop environment the graphical interface of Linux, think of it as the desktop, the taskbar and the system app of Windows / Mac. Some of the most popular are:
 
 	- Gnome, which is the one I use who is more of a MacOS style
-	- Kde which is the customisation boss, it ressemble Windows
+	- Kde which is the customization boss, it resemble Windows
 	- XFCE great for an old PC
-	- Hyprland a keyboard focused DE for advanced user, customise it to your liking.
+	- Hyprland a keyboard focused DE for advanced user, customize it to your liking.
 
 They are way more Desktop environment but I only listed the most popular. Some distro ships with their own Desktop Environment, like Linux Mint which ships with Cinamon a Windows like DE great for new user and that's only to cite the most knows.
 
@@ -144,17 +152,17 @@ They are way more Desktop environment but I only listed the most popular. Some d
 
 *(Extras: Non-essentials hardware, they are quality of life for the most part, like the fingerprint scanner.)*
 
-Now you may ask yourself 'Why do you use Gnome and not Kde?', well the first reason is look... I am not a fan of how KDE looks overall but that's really personal and taste dependent. Second the great integration of laptop utilities, I can control my keyboard backlight, my power modes from the Gnome control natively, no need to install those annoying third-party apps from your manufacturer which usually sucks... But in the end which DE you use is which fit more of your use case.
+Now you may ask yourself 'Why do you use Gnome and not Kde?', well the first reason is aesthetic. I am not a fan of how KDE looks overall but that's really personal and taste dependent. Second the great integration of laptop utilities, I can control my keyboard backlight, my power modes from the Gnome control natively, no need to install those annoying third-party apps from your manufacturer which usually sucks... But in the end which DE you use is which fit more of your use case.
 
 To get back to GNOME it also has an overall better integration of the fingerprint scanner, my laptop does not have one sadly but from what I've seen GNOME tends to win on this side. KDE and others stays on the essentials while GNOME is exploring the extras. Don't get me wrong KDE also has fingerprint scanner support but Gnome one is more mature and usually work out of the box.
 
-But that's not true for everything. For exemple webcam and microphone don't necessarily work best on Gnome or KDE, it really depends of the hardware itself rather than the software. So in the end there isn't a good answer to the question of extra hardware.
+But that's not true for everything. For example webcam and microphone don't necessarily work best on Gnome or KDE, it really depends of the hardware itself rather than the software. So in the end there isn't a good answer to the question of extra hardware.
 
 #### II.4 - Battery life
 
 Now let's speak about the battery life on Linux. It's not necessarily magical, it vary distro to distro and from hardware to hardware. In most case Linux uses less resource than Windows so the battery life goes with it. From my own experience Fedora lightly improve my battery life while Void somehow improved it by a lot.
 
-So once again there isn't a clear answer to the question. It depands of your hardware, distro and use case. For light work such as browsing, watching videos writing a document then Linux would probably improve your battery life. But for heavier task I don't think that's really true. As software tends to be more made and optimized for Windows.
+So once again there isn't a clear answer to the question. It depends of your hardware, distro and use case. For light work such as browsing, watching videos writing a document then Linux would probably improve your battery life. But for heavier task I don't think that's really true. As software tends to be more made and optimized for Windows.
 
 ## III - For who and why?
 
@@ -165,7 +173,7 @@ Next if you're a tech enthusiast then go for it, Linux is a huge part in tech. D
 
 #### III.2 - Gamers
 
-Then come gamer. If you play any Riot Games (Valorant, LOL, 2XKO), COD's, EA, Apex Legend, Escape from Tarkov, PUBG, R6, GTA then those games and many more won't work on Linux. You can use [ProtonDB](https://www.protondb.com/) to check if the games you play run on Linux. Even if ProtonDB says your game run on Linux it doesn't mean it's gonna be a smooth and flawless experience.  I have experienced issue with games on Linux. For exemple Minecraft runs poorly for me.
+Then come gamer. If you play any Riot Games (Valorant, LOL, 2XKO), COD's, EA, Apex Legend, Escape from Tarkov, PUBG, R6, GTA then those games and many more won't work on Linux. You can use [ProtonDB](https://www.protondb.com/) to check if the games you play run on Linux. Even if ProtonDB says your game run on Linux it doesn't mean it's gonna be a smooth and flawless experience.  I have experienced issue with games on Linux. For example Minecraft runs poorly for me.
 I'm also someone that mod my games. Mod tends to use [.dll](https://en.wikipedia.org/wiki/Dynamic-link_library) files, which are Windows API files so on Linux they run poorly safe to say if you have a 40gb mod folder then Linux is not even an option. But *again* the experience is very different from person to person, so try you got nothing to loose in the end.
 
 #### III.3 - Creators 
@@ -181,13 +189,77 @@ Then if your someone who use the Adobe Suite, MS Suite, Blender, FL Studio, Soli
 
 ## IV - What flavour
 
+#### IV.1 - Generality
+
+They are 3 main families of Linux distro :
+
+	- Debian (Ubuntu is built on top of it)
+	- Fedora
+	- Arch
+
+Now let's speak about fixed release and bleeding rolling release.
+
+Fixed release has a slow update cycle, new update have a huge test phase. Which makes them very stable. Debian / Ubuntu are fixed release distros which makes them very stable. Great for every day use and beginner.
+
+Then you have rolling release. Constant little update, few to no testing phase. Sure you have everything as soon as it release but your system is prone to destroy itself with an update. Arch distro are rolling release. They are fun to use but they may break.
+
+Then you have the middle ground. Fedora distro usually stands in the middle. Update are regular enough to be comparable to Debian but not fast enough to be Arch level. And this is what I love, you have the best of both world : Fast update and a stable system.
+
+
+Something important is that distro aren't that different. What will change for the most part is update cycle and the package manager. Most distro aren't original or unique. They usually just bring some tweaks or usually work best out of the box. But in the end it's still run on the Linux kernel. So there's no need to loose your mind over what distro to use. Try them and use what works best with your hardware and with you.
+
+Watch this [video](https://www.youtube.com/watch?v=FBvDVwQ9OpI&t=378s) for more details.
+
+#### IV.2 - Recommendation
+
+##### IV.2.1 - Beginner distro
+
+If this is your first time installing Linux and your goal is to get the closest experience to Windows then [Linux Mint Cinnamon](https://linuxmint.com/download.php) is definitely for you. In fact my grandmother uses it on her computer and I haven't heard her complain or call me about something wrong, once had a printer issue sure but that wasn't Linux related. There is also [ZorinOS](https://zorin.com/os/download/) but I haven't tried it so I cannot say if it's good or not.
+
+You may also use an immutable distro. Which make the core read only meaning you can't mess with important thing, think of it as when you were 15 and tried to delete system32 on Windows and it wouldn't let you, well that's the Linux version of it. If also an update decides to break your system then the distro will automatically cancel that update. Popular immutable distro are [Fedora Silverblue](https://fedoraproject.org/atomic-desktops/silverblue/), [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite/) and [Vanilla OS](https://vanillaos.org/) based on Debian.
+
+
+>[!NOTE]
+>I've never used immutable distro as a main distro. I've used Vanilla OS out of curiosity so that's about it. I can't guarantee that they are any good.
+
+
+Then you obviously have [Ubuntu](https://ubuntu.com/) but I don't necessarily recomand it nowadays, especially if you have a low end computer.
+
+For beginner I still think Mint Cinamon is the best choice.
+
+##### IV.2.2 - Popular distro
+
+Now let's say you've been using Linux for some time perhaps you're actually using Linux Mint? And you want to switch to more regular distro, then [Debian](https://www.debian.org/) will feels like home. Mint is built on it, same experience but more freedom. [Fedora](https://fedoraproject.org/) will change a bit from Debian / Ubuntu based distro but this is personally what I use everyday and it's very stable and cutting edge meaning it gets regularly updated so you have every new features soon after they releases.
+
+##### IV.2.3 - "Hard" distros
+
+I'll be quick on this section since this video is dedicated to Linux beginners but if for some reason *(larp)* you decide to start with an hard distro then [Arch](https://archlinux.org/) is for you, shout out to [Void](https://voidlinux.org/) and [Alpine](https://alpinelinux.org/). 
+
+##### IV.2.4 - Privacy & Cybersecurity focused distros
+
+If you're fleeing Windows for privacy reason and still want a usable pc then [Parrot Security](https://parrotsec.org/) and [Kali](https://www.kali.org/) *(larp)* are the distro you want to aim. But if you want maximum security then [QubesOS](https://www.qubes-os.org/) is for you. And if you have questionable things to hide or perhaps you want to be untracable then [TailOS](https://tails.net/) is the one you wanna run to.
+
+
+>[!NOTE] 
+> QubesOS is not the best distro to daily drive. TailOS runs on a USB stick and wipes data when you unplug it so not the best at all to use everyday.
+
+#### IV.3 - Server use
+
+Linux is mainly used in the server world so if you plan to run your own server for whatever reason then Linux is a good option, since freedom is unlimited you can configure it to run anything, Discord bot, Website, Photo server, Minecraft Server. Really the possibilities are infinite. 
+
+Google, AWS, Meta, Wikipedia, X and even Microsoft uses their own version of Linux for server use.
+
+[Ubuntu Server](https://ubuntu.com/download/server) and [Fedora Server](https://fedoraproject.org/server/download/) are great choice for server.
+
+![Local AI](img/ai-local.jpg "AI")
+
+And if you have an old Raspberry Pi with low ram amount then [Alpine Linux](https://alpinelinux.org/downloads/) is a great choice, I personally used it when I used my Raspberry Pi 3B+ with 1gb of ram to host my Discord bot. [Void Linux](https://voidlinux.org/download/#arm%20platforms) also supports Raspberry Pi. If you want some metrics on Alpine my server was using around 70mb on RAM. It was running the system, a Discord bot and a photo server, well obviously there's no desktop only a nice terminal looking at you. I assume you'd get similar result with Void. 
+
+![PI](img/pi.jpg "Raspberry Pi 3B+") ![Alpine](img/alpine.jpg "Alpine Linux")
+
 ## V - Limitation
 
 ## VI - Conclusion
-
-
-
-
 
 ## Extra - A brief introduction to the the Linux world
 #### EXTRA.1 - The Linux kernel
